@@ -1,13 +1,19 @@
 import { AddTask } from './components/AddTask'
 import { Header } from './components/Header'
+import { TaskBoard } from './components/TaskBoard'
 import './global.css'
+
+import styles from './App.module.css'
 
 export function App() {
   return (
     <>
       <Header />
-      <AddTask />
-      <h1>Something</h1>
+
+      <div className={styles.wrapper}>
+        <AddTask />
+        <TaskBoard />
+      </div>
     </>
   )
 }

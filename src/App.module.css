@@ -1,0 +1,7 @@
+.wrapper {
+  margin: auto;
+  padding: 0 1rem;
+  width: 46rem;
+  display: grid;
+  align-items: center;
+}

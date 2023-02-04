@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.header span {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.header div:first-child span {
+  color: var(--blue);
+}
+
+.header div:last-child span {
+  color: var(--purple);
+}
+
+.header div button {
+  height: 1.1875;
+  min-width: 1.5625rem;
+  padding: 0.125rem 0.5rem;
+  margin-left: 0.5rem;
+  border-width: 0px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--gray-200);
+  background-color: var(--gray-400);
+}
+
+.header div button:focus {
+  box-shadow: 0;
+}
