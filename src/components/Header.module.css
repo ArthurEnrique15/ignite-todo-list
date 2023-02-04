@@ -1,0 +1,31 @@
+.header {
+  background: var(--gray-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12.5rem;
+}
+
+.header div {
+  width: 7.875rem;
+  height: 3rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header div img {
+  width: 1.375rem;
+  height: 2.25rem;
+}
+
+.header div p {
+  color: var(--purple-dark);
+}
+
+/* change the color of the first span in p*/
+.header div p span:first-child {
+  color: var(--blue);
+}
