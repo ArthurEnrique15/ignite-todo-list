@@ -33,5 +33,24 @@
 }
 
 .header div button:focus {
-  box-shadow: 0;
+  outline: none;
+  border: 10px;
+}
+
+.board {
+  border-top: 1px solid var(--gray-400);
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.board span:first-of-type {
+  font-weight: 700;
+}
+
+.board img {
+  margin-bottom: 1rem;
 }
