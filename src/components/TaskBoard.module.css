@@ -32,12 +32,7 @@
   background-color: var(--gray-400);
 }
 
-.header div button:focus {
-  outline: none;
-  border: 10px;
-}
-
-.board {
+.noTasks {
   border-top: 1px solid var(--gray-400);
   padding-top: 4rem;
   display: flex;
@@ -47,10 +42,10 @@
   align-content: center;
 }
 
-.board span:first-of-type {
+.noTasks span:first-of-type {
   font-weight: 700;
 }
 
-.board img {
+.noTasks img {
   margin-bottom: 1rem;
 }

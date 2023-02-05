@@ -1,8 +1,11 @@
 import styles from './TaskBoard.module.css'
 
 import clipboard from '../assets/clipboard.svg'
+import { Task } from './Task'
 
 export function TaskBoard() {
+  const thereIsAtLeastOneTask = true
+
   return (
     <>
       <div className={styles.header}>
@@ -18,9 +21,20 @@ export function TaskBoard() {
       </div>
 
       <div className={styles.board}>
-        <img src={clipboard} alt="" />
-        <span>Você ainda não tem tarefas cadastradas</span>
-        <span>Crie tarefas e organize seus itens a fazer</span>
+        {thereIsAtLeastOneTask ? (
+          <>
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+          </>
+        ) : (
+          <div className={styles.noTasks}>
+            <img src={clipboard} alt="" />
+            <span>Você ainda não tem tarefas cadastradas</span>
+            <span>Crie tarefas e organize seus itens a fazer</span>
+          </div>
+        )}
       </div>
     </>
   )

@@ -1,0 +1,99 @@
+.task {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 0.75rem;
+
+  width: 46rem;
+  height: 4.5rem;
+
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Estiliza toda task que tenha outra task depois */
+.task + .task {
+  margin-top: 0.75rem;
+}
+
+.checkboxContainer input {
+  appearance: none;
+}
+
+.checkboxContainer {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.2rem;
+}
+
+.checkbox {
+  width: 1.09rem;
+  height: 1.09rem;
+  border-radius: 999px;
+  background-color: var(--gray-500);
+  border: 1.5px solid var(--blue);
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2.25px 3.12px 4.08px 3.21px;
+
+  transition: 0.1s;
+}
+
+.checkbox:hover {
+  border-color: var(--blue-dark);
+  background-color: rgba(30, 111, 159, .2); /* var(--blue-dark) */
+}
+
+.checkbox:checked {
+  border-color: var(--purple-dark);
+  background-color: var(--purple-dark);
+}
+
+.checkbox:checked:hover {
+  border-color: var(--purple);
+  background-color: var(--purple);
+}
+
+/* create an element that will be showed after the checkbox */
+.checkbox:after {
+  content: "";
+  display: none;
+  width: 7.31px;
+  height: 4.69px;
+  border: 1.2px solid var(--gray-100);
+  border-width: 0 0 1.2px 1.2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* show the element when checkbox is checked */
+.checkbox:checked:after {
+  display: block;
+}
+
+.task span {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
+
+.task s {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
