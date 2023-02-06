@@ -11,7 +11,9 @@ export function AddTask({ onAddTask }: AddTaskProps) {
   const [newTaskText, setNewTaskText] = useState('')
 
   function handleAddTask() {
-    onAddTask(newTaskText)
+    const description = newTaskText
+    setNewTaskText('')
+    onAddTask(description)
   }
 
   function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
