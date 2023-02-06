@@ -22,6 +22,9 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+
+  font-size: 0.875rem;
+  color: var(--gray-100);
 }
 
 /* Estiliza toda task que tenha outra task depois */
@@ -86,6 +89,10 @@
 /* show the element when checkbox is checked */
 .checkbox:checked:after {
   display: block;
+}
+
+.task s {
+  color: var(--gray-300);
 }
 
 .task button {
