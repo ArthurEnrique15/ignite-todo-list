@@ -16,13 +16,6 @@
   border: 1px solid var(--gray-400);
   border-radius: 0.5rem;
 
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-
   font-size: 0.875rem;
   color: var(--gray-100);
 }
@@ -116,16 +109,11 @@
   justify-content: center;
   align-items: center;
 
-  padding: 5px 5.2px 5px 6px;
+  padding: 0.25rem;
   transition: 0.2s;
 }
 
 .task button:hover {
   background-color: var(--gray-400);
   color: var(--danger);
-}
-
-.task button svg {
-  /* width: 12.45px; */
-  height: 0.875rem;
 }
