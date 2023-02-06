@@ -1,17 +1,16 @@
 import styles from './Task.module.css'
 
 import { Trash } from 'phosphor-react'
-import { useState } from 'react'
 
 type TaskProps = {
   description: string
+  isChecked: boolean
+  updateTaskStatus: (description: string) => void
 }
 
-export function Task({ description }: TaskProps) {
-  const [isChecked, setIsChecked] = useState(false)
-
+export function Task({ description, isChecked, updateTaskStatus }: TaskProps) {
   function handleTaskCheck() {
-    setIsChecked(!isChecked)
+    updateTaskStatus(description)
   }
 
   return (
@@ -19,6 +18,7 @@ export function Task({ description }: TaskProps) {
       <div className={styles.checkboxContainer}>
         <input
           type="checkbox"
+          checked={isChecked}
           onChange={handleTaskCheck}
           className={styles.checkbox}
         />

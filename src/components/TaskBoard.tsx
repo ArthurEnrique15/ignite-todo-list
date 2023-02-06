@@ -4,15 +4,30 @@ import clipboard from '../assets/clipboard.svg'
 import { Task } from './Task'
 import { AddTask } from './AddTask'
 import { useState } from 'react'
+import { ITask } from '../interfaces/Task'
 
 export function TaskBoard() {
-  const [tasks, setTasks] = useState<string[]>([])
+  const [tasks, setTasks] = useState<ITask[]>([])
 
   function handleAddTask(description: string) {
-    setTasks([...tasks, description])
+    setTasks([...tasks, { description, isChecked: false }])
+  }
+
+  function updateTaskStatus(description: string) {
+    const updatedTasks = tasks.map((task) => {
+      if (task.description === description) {
+        task.isChecked = !task.isChecked
+      }
+
+      return task
+    })
+
+    setTasks(updatedTasks)
   }
 
   const tasksAmount = tasks.length
+
+  const completedTasks = tasks.filter((task) => task.isChecked).length
 
   return (
     <>
@@ -26,14 +41,23 @@ export function TaskBoard() {
 
         <div className={styles.completedTasks}>
           <span>Concluídas</span>
-          <button>0 de {tasksAmount}</button>
+          <button>
+            {completedTasks} de {tasksAmount}
+          </button>
         </div>
       </div>
 
       <div className={styles.board}>
         {tasksAmount ? (
           tasks.map((task) => {
-            return <Task key={task} description={task} />
+            return (
+              <Task
+                key={task.description}
+                description={task.description}
+                isChecked={task.isChecked}
+                updateTaskStatus={updateTaskStatus}
+              />
+            )
           })
         ) : (
           <div className={styles.noTasks}>
