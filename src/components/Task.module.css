@@ -91,6 +91,14 @@
   display: block;
 }
 
+.taskText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .task s {
   color: var(--gray-300);
 }

@@ -23,7 +23,10 @@ export function Task({ description }: TaskProps) {
           className={styles.checkbox}
         />
       </div>
-      {isChecked ? <s>{description}</s> : <span>{description}</span>}
+
+      <div className={styles.taskText}>
+        {isChecked ? <s>{description}</s> : <span>{description}</span>}
+      </div>
 
       <button title="Deletar task">
         <Trash size={24} />
