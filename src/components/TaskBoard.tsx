@@ -12,7 +12,7 @@ export function TaskBoard() {
     setTasks([...tasks, description])
   }
 
-  const thereIsAtLeastOneTask = true
+  const tasksAmount = tasks.length
 
   return (
     <>
@@ -21,17 +21,17 @@ export function TaskBoard() {
       <div className={styles.header}>
         <div className={styles.createdTasks}>
           <span>Tarefas criadas</span>
-          <button>0</button>
+          <button>{tasksAmount}</button>
         </div>
 
         <div className={styles.completedTasks}>
           <span>Concluídas</span>
-          <button>2 de 5</button>
+          <button>0 de {tasksAmount}</button>
         </div>
       </div>
 
       <div className={styles.board}>
-        {thereIsAtLeastOneTask ? (
+        {tasksAmount ? (
           tasks.map((task) => {
             return <Task key={task} description={task} />
           })
