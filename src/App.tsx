@@ -1,4 +1,3 @@
-import { AddTask } from './components/AddTask'
 import { Header } from './components/Header'
 import { TaskBoard } from './components/TaskBoard'
 import './global.css'
@@ -11,7 +10,6 @@ export function App() {
       <Header />
 
       <div className={styles.wrapper}>
-        <AddTask />
         <TaskBoard />
       </div>
     </>

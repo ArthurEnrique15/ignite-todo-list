@@ -2,12 +2,15 @@ import styles from './TaskBoard.module.css'
 
 import clipboard from '../assets/clipboard.svg'
 import { Task } from './Task'
+import { AddTask } from './AddTask'
 
 export function TaskBoard() {
   const thereIsAtLeastOneTask = true
 
   return (
     <>
+      <AddTask />
+
       <div className={styles.header}>
         <div className={styles.createdTasks}>
           <span>Tarefas criadas</span>
