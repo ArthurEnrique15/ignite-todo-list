@@ -18,7 +18,6 @@ export function AddTask({ onAddTask }: AddTaskProps) {
 
   function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
     const newTaskText = event.target.value
-    console.log(newTaskText)
     setNewTaskText(newTaskText)
   }
 
