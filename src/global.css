@@ -18,7 +18,7 @@
 
 :focus {
   outline: transparent; /* remove o outline padrão do browser */
-  box-shadow: 0 0 0 2px var(--purple-dark);
+  /* box-shadow: 0 0 0 2px var(--purple-dark); */
 }
 
 * {
