@@ -3,7 +3,11 @@ import styles from './Task.module.css'
 import { Trash } from 'phosphor-react'
 import { useState } from 'react'
 
-export function Task() {
+type TaskProps = {
+  description: string
+}
+
+export function Task({ description }: TaskProps) {
   const [isChecked, setIsChecked] = useState(false)
 
   function handleTaskCheck() {
@@ -19,17 +23,7 @@ export function Task() {
           className={styles.checkbox}
         />
       </div>
-      {isChecked ? (
-        <s>
-          Integer urna interdum massa libero auctor neque turpis turpis semper.
-          Duis vel sed fames integer.
-        </s>
-      ) : (
-        <span>
-          Integer urna interdum massa libero auctor neque turpis turpis semper.
-          Duis vel sed fames integer.
-        </span>
-      )}
+      {isChecked ? <s>{description}</s> : <span>{description}</span>}
 
       <button title="Deletar task">
         <Trash size={24} />
