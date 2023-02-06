@@ -1,6 +1,6 @@
 import styles from './Task.module.css'
 
-import trash from '../assets/trash.svg'
+import { Trash } from 'phosphor-react'
 
 export function Task() {
   return (
@@ -13,7 +13,9 @@ export function Task() {
         Duis vel sed fames integer.
       </span>
 
-      <img src={trash} alt="" />
+      <button title="Deletar task">
+        <Trash size={24} />
+      </button>
     </div>
   )
 }

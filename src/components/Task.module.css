@@ -88,12 +88,29 @@
   display: block;
 }
 
-.task span {
-  font-size: 0.875rem;
-  color: var(--gray-100);
+.task button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--gray-300);
+  cursor: pointer;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 5.2px 5px 6px;
+  transition: 0.2s;
 }
 
-.task s {
-  font-size: 0.875rem;
-  color: var(--gray-100);
+.task button:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
+}
+
+.task button svg {
+  /* width: 12.45px; */
+  height: 0.875rem;
 }
