@@ -25,6 +25,14 @@ export function TaskBoard() {
     setTasks(updatedTasks)
   }
 
+  function deleteTask(description: string) {
+    const updatedTasks = tasks.filter(
+      (task) => task.description !== description,
+    )
+
+    setTasks(updatedTasks)
+  }
+
   const tasksAmount = tasks.length
 
   const completedTasks = tasks.filter((task) => task.isChecked).length
@@ -56,6 +64,7 @@ export function TaskBoard() {
                 description={task.description}
                 isChecked={task.isChecked}
                 updateTaskStatus={updateTaskStatus}
+                deleteTask={deleteTask}
               />
             )
           })

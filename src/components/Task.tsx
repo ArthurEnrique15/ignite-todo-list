@@ -6,11 +6,21 @@ type TaskProps = {
   description: string
   isChecked: boolean
   updateTaskStatus: (description: string) => void
+  deleteTask: (description: string) => void
 }
 
-export function Task({ description, isChecked, updateTaskStatus }: TaskProps) {
+export function Task({
+  description,
+  isChecked,
+  updateTaskStatus,
+  deleteTask,
+}: TaskProps) {
   function handleTaskCheck() {
     updateTaskStatus(description)
+  }
+
+  function handleDeleteTask() {
+    deleteTask(description)
   }
 
   return (
@@ -28,7 +38,7 @@ export function Task({ description, isChecked, updateTaskStatus }: TaskProps) {
         {isChecked ? <s>{description}</s> : <span>{description}</span>}
       </div>
 
-      <button title="Deletar task">
+      <button title="Deletar task" onClick={handleDeleteTask}>
         <Trash size={24} />
       </button>
     </div>
