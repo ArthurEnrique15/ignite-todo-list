@@ -6,6 +6,8 @@ Figma can be accessed [here](https://www.figma.com/file/gJbWL1tbgVER1LDeqpuQpm/T
 
 Execution tutorial:
 
+- Clone the repo
+  
 - Execute the following commands
   
   ```bash
