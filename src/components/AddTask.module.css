@@ -53,6 +53,10 @@
   background-color: var(--blue);
 }
 
+.addTask button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
 
 .addTask button img {
   height: 1rem;
