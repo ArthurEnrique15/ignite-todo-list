@@ -8,7 +8,7 @@
 
 .addTask input {
   height: 3.375rem;
-  width: 39.875rem;
+  width: 100%;
   margin-right: 0.5rem;
   border-width: 0px;
   border-radius: 8px;
@@ -24,6 +24,11 @@
 .addTask input::placeholder {
   color: var(--gray-300);
 }
+@media only screen and (max-width: 360px) {
+  .addTask input::placeholder {
+    font-size: 13px;
+  }
+}
 
 .addTask button {
   height: 3.25rem;
@@ -33,11 +38,13 @@
   color: var(--gray-100);
   background-color: var(--blue-dark);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-weight: 700;
   font-size: 0.875rem;
   cursor: pointer;
+
+  padding: 1rem;
 
   transition: background-color 0.2s;
 }

@@ -1,7 +1,20 @@
 .wrapper {
+  max-width: 48rem;
   margin: auto;
   padding: 0 1rem;
-  width: 46rem;
-  display: grid;
-  align-items: center;
+  /* width: 46rem; */
+  /* display: grid;
+  align-items: center; */
+}
+
+@media (max-width: 768) {
+  /* se 16 é 100%, quanto é 14? 87,5% */
+  html {
+    font-size: 87.5%;
+  }
+
+  /* coloca apenas 1 coluna, fazendo com que o conteúdo caiba na tela mobile */
+  /* .wrapper {
+    display: block;
+  } */
 }
